@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoTrack Explorer</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #000;
+      overflow: hidden;
+    }
+    #game {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="game"></div>
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+  <script>
+    const ruffle = window.RufflePlayer.newest();
+    const player = ruffle.createPlayer();
+    player.style.width = "100%";
+    player.style.height = "100%";
+    document.getElementById("game").appendChild(player);
+    player.load("EcoTrack Explorer final.swf");
+  </script>
+</body>
+</html>
